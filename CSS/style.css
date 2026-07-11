@@ -1,174 +1,148 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;   /* Added */
-}
-
-html,
-body{
-    height: 100%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    background-color: purple;
-
-    display: flex;           
-    flex-direction: column;  
-    min-height: 100vh;       
+    background:purple;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
+
+/* HEADER */
 
 .header{
-    height: 120px;
-    background-color: black;
-    margin: 5px;
-
-    position: relative;
-    display: flex;
-    align-items: center;
+    height:120px;
+    background:black;
+    display:flex;
+    align-items:center;
+    position:relative;
+    padding:0 10px;
 }
 
 .img1{
-    width: 120px;
-    height: 120px;
+    width:120px;
+    height:120px;
+}
+
+.Navh2{
+    color:white;
+    margin-left:10px;
+}
+
+.Navh2Link{
+    color:white;
+    text-decoration:none;
+}
+
+.Navh2Link:hover{
+    text-shadow:0 0 10px white;
 }
 
 .navLink{
-    gap: 40px;
-    display: flex;
-
-    position: absolute;
-    left: 50%;
+    position:absolute;
+    right:50px;
+    display:flex;
+    gap:40px;
 }
 
 .navLink a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    background: transparent;
-    font-size: 23px;
+    color:white;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
 }
+
+.navLink a:hover{
+    text-shadow:0 0 10px white;
+}
+
+/* MAIN */
 
 .main{
-    flex: 1;
+    flex:1;
+    padding:30px;
 }
 
-.footer{
-    background-color: black;
-    width: 100%;
-    height: 120px;
+/* SKILLS BOX */
 
-    margin-top: auto;
-    color: white;
-    font-size: 30px;
-    display: flex;
-    /* text-align: center; */
-    justify-content: center;
-    align-items: center;
-    /* padding-top: 50; */
+.skills-section{
+    background:#151515;
+    border:3px solid #c400ff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 0 20px rgba(196,0,255,.6);
 }
+
+.skillsH2{
+    color:white;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+/* CARDS */
+
 .container{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    /* border: solid white; */
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
 }
 
 .div1,
 .div2,
 .div3{
-    border: 2px solid black;
-    width: 32%;
-    height: 600px;
-    background-color: black;
-
-    transition: all 0.3s ease;
-    cursor: pointer;
-
-    border-radius: 10px;
-}
-
-.upper1{
-    width: 100%;
-    height: 40%;
-    /* border: solid pink; */
-}
-
-.lower1{
-    width: 100%;
-    height: 58%;
-    /* border: solid pink; */
-    margin-top: 10px;
-}
-
-.imgLand{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    border-radius: 10px;
-}
-
-.imgWater{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    border-radius: 10px;
-}
-
-.imgAir{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    border-radius: 10px;
-}
-
-h2{
-    color: white;
-    text-align: center;
-    font-size: 30px;
-}
-
-p{
-    color: white;
-    padding: 5px;
-    font-size: 18px;
-    text-align: center;
+    width:32%;
+    background:black;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
 }
 
 .div1:hover,
 .div2:hover,
 .div3:hover{
-    transform: translateY(-10px) scale(1.03);
-    border: 2px solid white;
-    box-shadow: 0 0 15px white,
-                0 0 30px white;
+    transform:translateY(-10px);
+    box-shadow:0 0 20px white;
 }
 
-.about:hover,
-.contact:hover{
-    text-shadow: 0 0 5px white,
-                 0 0 10px white,
-                 0 0 20px white;
-
-     transform: translateY(-3px) scale(1.03);            
+.upper1{
+    height:250px;
 }
 
-.Navh2{
-    color: white;
-    padding: 5px;
+.imgLand,
+.imgWater,
+.imgAir{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.Navh2Link{
-    text-decoration: none;
-    color: white;
+.lower1{
+    padding:15px;
 }
 
-.Navh2Link:hover{
-    text-shadow: 0 0 5px white,
-                 0 0 10px white,
-                 0 0 20px white;
+.lower1 h2{
+    color:white;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.lower1 p{
+    color:white;
+    text-align:center;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+.footer{
+    background:black;
+    color:white;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
 }
