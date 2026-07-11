@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111;
+    border-bottom: 2px solid #c400ff;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .img1 {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.Navh2Link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.Navh2Link span {
+    color: #c400ff;
+    font-size: 14px;
+}
+
+.navLink a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navLink a:hover {
+    color: #c400ff;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #151515;
+    border: 3px solid #c400ff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(196,0,255,.4);
+    margin-bottom: 40px;
+}
+
+.hero-left {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #c400ff;
+    transition: .4s;
+}
+
+.hero-left img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px white, 0 0 40px #c400ff;
+}
+
+.hero-right {
+    width: 60%;
+}
+
+.hero-right h1 {
+    color: white;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero-right span {
+    color: #c400ff;
+}
+
+.hero-right h3 {
+    color: #dddddd;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.hero-right p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    padding: 15px 35px;
+    background: #c400ff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .3s;
+    display: inline-block;
+}
+
+.hero-btn:hover {
+    transform: translateY(-6px);
+    background: #9f00d4;
+    box-shadow: 0 0 20px white;
+}
+
+.about-me {
+    background: #151515;
+    border: 3px solid #c400ff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(196,0,255,.4);
+    margin-bottom: 40px;
+}
+
+.about-me h2 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.about-me p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.journey h2 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.journey-container {
+    display: flex;
+    gap: 30px;
+}
+
+.journey-card {
+    flex: 1;
+    background: #151515;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #c400ff;
+    transition: .4s;
+}
+
+.journey-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 20px white;
+}
+
+.journey-card h3 {
+    color: #c400ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.journey-card p {
+    color: white;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    margin-top: 60px;
+    border-top: 2px solid #c400ff;
+    color: #888;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    .hero-left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .journey-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .navLink {
+        position: static;
+    }
+
+    .navLink a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+
+    .hero-left img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-right h1 {
+        font-size: 38px;
+    }
+
+    .hero-right h3 {
+        font-size: 20px;
+    }
+
+    .hero-right p, .about-me p {
+        font-size: 16px;
+    }
+
+    .about-me h2, .journey h2 {
+        font-size: 32px;
+    }
+}
