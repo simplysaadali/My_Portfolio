@@ -11,8 +11,6 @@ body{
     min-height:100vh;
 }
 
-/* HEADER */
-
 .header{
     height:120px;
     background:black;
@@ -59,14 +57,10 @@ body{
     text-shadow:0 0 10px white;
 }
 
-/* MAIN */
-
 .main{
     flex:1;
     padding:30px;
 }
-
-/* SKILLS BOX */
 
 .skills-section{
     background:#151515;
@@ -81,8 +75,6 @@ body{
     font-size:40px;
     margin-bottom:30px;
 }
-
-/* CARDS */
 
 .container{
     display:flex;
@@ -135,8 +127,6 @@ body{
     line-height:1.6;
 }
 
-/* FOOTER */
-
 .footer{
     background:black;
     color:white;
@@ -145,4 +135,72 @@ body{
     justify-content:center;
     align-items:center;
     font-size:24px;
+}
+
+.education-sec{
+    background:#151515;
+    border:3px solid #c400ff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 0 20px rgba(196,0,255,.6);
+    margin-top:30px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.education-sec h2{
+    color:white;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.education-sec p{
+    color:white;
+    line-height:1.6;
+    font-size:18px;
+}
+
+.education-sec button{
+    background:#c400ff;
+    color:white;
+    border: 2px solid #c400ff;
+    padding:10px 20px;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:20px;
+
+    align-self:center;
+}
+
+.education-sec button:hover{
+    background:#a300cc;
+    transform:translateY(-5px);
+    box-shadow:0 0 10px white;
+}
+
+.linkUOG{
+    text-decoration:none;
+    color:#c400ff;
+}
+
+.linkUOG:hover{
+    text-shadow:0 0 10px white;
+    color: white;
+}
+
+.linkBTN{
+    text-decoration:none;
+    color:white;
+}
+
+.linksaad{
+    color:#c400ff;
+    text-decoration:none;
+}
+
+.linksaad:hover{
+    text-shadow:0 0 10px white;
+    color: white;   
 }
