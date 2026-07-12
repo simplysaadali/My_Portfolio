@@ -234,3 +234,64 @@ body{
     border-top: 1px solid #222;
     margin-top: auto;
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .div1, .div2 {
+        width: 45%;
+    }
+
+    .div3 {
+        width: 60%;
+    }
+
+    .skillsH2, .education-sec h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .navLink {
+        position: static;
+        gap: 30px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div1, .div2, .div3 {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .skills-section, .education-sec {
+        padding: 30px 20px;
+    }
+
+    .skillsH2, .education-sec h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .education-sec p {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+    }
+}
