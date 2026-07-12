@@ -13,45 +13,71 @@ font-family:Arial;
 }
 
 .header{
-height:120px;
-background:black;
-display:flex;
-align-items:center;
-padding:0 10px;
-position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(12px, 4vw, 20px) clamp(10px, 5vw, 8%);
+    background: black;
+    border-bottom: 2px solid #c400ff;
+    gap: clamp(10px, 3vw, 15px);
+    position: relative;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%;
 }
 
 .img1{
-width:120px;
-height:120px;
+    width: clamp(38px, 10vw, 120px);
+    height: clamp(38px, 10vw, 120px);
+    flex-shrink: 0;
 }
 
 .Navh2{
-margin-left:10px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
 }
 
 .Navh2Link{
-color:white;
-text-decoration:none;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(15px, 4.5vw, 20px);
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: left;
+}
+
+.Navh2Link span{
+    color: #c400ff;
+    font-size: clamp(11px, 3vw, 14px);
+    display: block;
+    margin-top: 2px;
 }
 
 .navLink{
-position:absolute;
-right:50px;
-display:flex;
-gap:40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 40px);
+    position: static;
 }
 
 .navLink a{
-color:white;
-text-decoration:none;
-font-size:22px;
-font-weight:bold;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(12px, 3vw, 22px);
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .navLink a:hover,
 .Navh2Link:hover{
-text-shadow:0 0 10px white;
+    text-shadow: 0 0 10px white;
 }
 
 .main{
@@ -118,4 +144,47 @@ justify-content:center;
 align-items:center;
 color:white;
 font-size:22px;
+}
+
+@media (max-width: 600px) {
+    .contactSection{
+        width: 100%;
+    }
+
+    .contactSection h1{
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main{
+        padding: 20px 10px;
+    }
+
+    .contactSection{
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .contactSection h1{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    input,
+    textarea{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button{
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .footer{
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
+    }
 }

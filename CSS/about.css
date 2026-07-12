@@ -19,44 +19,59 @@ body {
 
 .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: clamp(12px, 4vw, 20px) clamp(10px, 5vw, 8%);
     background: #111;
     border-bottom: 2px solid #c400ff;
+    gap: clamp(10px, 3vw, 15px);
 }
 
 .header-logo {
     display: flex;
     align-items: center;
     gap: 15px;
+    max-width: 100%;
 }
 
 .header .img1 {
-    width: 50px;
-    height: 50px;
+    width: clamp(38px, 10vw, 50px);
+    height: clamp(38px, 10vw, 50px);
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .Navh2Link {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: clamp(15px, 4.5vw, 20px);
     line-height: 1.2;
+    word-break: break-word;
 }
 
 .Navh2Link span {
     color: #c400ff;
-    font-size: 14px;
+    font-size: clamp(11px, 3vw, 14px);
+    display: block;
+    margin-top: 2px;
+}
+
+.navLink {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 20px);
 }
 
 .navLink a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 18px;
+    margin: 0;
+    font-size: clamp(12px, 3vw, 18px);
     font-weight: 600;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .navLink a:hover {
@@ -232,22 +247,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-        text-align: center;
-    }
-    
-    .navLink {
-        position: static;
-    }
-
-    .navLink a {
-        margin: 0 10px;
-        font-size: 16px;
-    }
-
     .hero-left img {
         width: 220px;
         height: 220px;
@@ -267,5 +266,55 @@ body {
 
     .about-me h2, .journey h2 {
         font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 20px 10px;
+    }
+
+    .hero {
+        padding: 25px 15px;
+    }
+
+    .hero-left img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-right h1 {
+        font-size: 28px;
+    }
+
+    .hero-right h3 {
+        font-size: 18px;
+    }
+
+    .hero-right p, 
+    .about-me p, 
+    .journey-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        width: 100%; 
+        text-align: center;
+    }
+
+    .about-me h2, 
+    .journey h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-me, 
+    .journey-card {
+        padding: 20px 15px;
+        border-radius: 12px;
     }
 }
