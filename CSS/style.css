@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: linear-gradient(135deg, #0c0513 0%, #05020a 100%);
     display: flex;
@@ -12,26 +16,35 @@ body{
     min-height: 100vh;
 }
 
+/* ===== HEADER / NAV (shared across all sections) ===== */
 .header{
-    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     background: #0d0d0d;
+    border-bottom: 2px solid #c400ff;
+    padding: clamp(12px, 4vw, 20px) clamp(10px, 5vw, 50px);
+    gap: clamp(10px, 3vw, 15px);
+}
+
+.header-logo{
     display: flex;
     align-items: center;
-    position: relative;
-    padding: 0 50px;
-    border-bottom: 2px solid #c400ff;
+    gap: 15px;
+    max-width: 100%;
 }
 
 .img1{
-    width: 65px;
-    height: 65px;
+    width: clamp(45px, 8vw, 65px);
+    height: clamp(45px, 8vw, 65px);
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .Navh2{
     color: white;
-    margin-left: 15px;
-    font-size: 20px;
+    font-size: clamp(15px, 4.5vw, 20px);
     line-height: 1.2;
 }
 
@@ -39,12 +52,15 @@ body{
     color: white;
     text-decoration: none;
     font-weight: 700;
+    word-break: break-word;
 }
 
-.Navh2Link span {
+.Navh2Link span{
     color: #c400ff;
-    font-size: 14px;
+    font-size: clamp(11px, 3vw, 14px);
     font-weight: 400;
+    display: block;
+    margin-top: 2px;
 }
 
 .Navh2Link:hover{
@@ -52,17 +68,18 @@ body{
 }
 
 .navLink{
-    position: absolute;
-    right: 50px;
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 40px);
 }
 
 .navLink a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: clamp(13px, 3vw, 18px);
     font-weight: 500;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
 
@@ -71,6 +88,7 @@ body{
     text-shadow: 0 0 10px rgba(196, 0, 255, 0.6);
 }
 
+/* ===== PAGE LAYOUT ===== */
 .main{
     flex: 1;
     max-width: 1200px;
@@ -79,6 +97,12 @@ body{
     padding: 40px 20px;
 }
 
+/* Anchor scroll offset so sections don't tuck under content */
+#home, #about, #contact{
+    scroll-margin-top: 30px;
+}
+
+/* ===== SKILLS (HOME) ===== */
 .skills-section{
     background: #141414;
     border: 3px solid #c400ff;
@@ -160,6 +184,7 @@ body{
     font-size: 14px;
 }
 
+/* ===== EDUCATION (HOME) ===== */
 .education-sec{
     background: #141414;
     border: 3px solid #c400ff;
@@ -223,6 +248,7 @@ body{
     height: 100%;
 }
 
+/* ===== FOOTER (shared) ===== */
 .footer{
     background: #0d0d0d;
     color: #666666;
@@ -233,6 +259,12 @@ body{
     font-size: 15px;
     border-top: 1px solid #222;
     margin-top: auto;
+}
+
+/* Space each big section from the one above it */
+.skills-section,
+.contact-page{
+    margin-top: 40px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -259,15 +291,8 @@ body{
 @media screen and (max-width: 768px) {
 
     .header {
-        height: auto;
         flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .navLink {
-        position: static;
-        gap: 30px;
+        text-align: center;
     }
 
     .container {
