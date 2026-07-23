@@ -16,7 +16,6 @@ body{
     min-height: 100vh;
 }
 
-/* ===== HEADER / NAV (shared across all sections) ===== */
 .header{
     display: flex;
     flex-wrap: wrap;
@@ -88,7 +87,6 @@ body{
     text-shadow: 0 0 10px rgba(196, 0, 255, 0.6);
 }
 
-/* ===== PAGE LAYOUT ===== */
 .main{
     flex: 1;
     max-width: 1200px;
@@ -97,12 +95,10 @@ body{
     padding: 40px 20px;
 }
 
-/* Anchor scroll offset so sections don't tuck under content */
 #home, #about, #contact{
     scroll-margin-top: 30px;
 }
 
-/* ===== SKILLS (HOME) ===== */
 .skills-section{
     background: #141414;
     border: 3px solid #c400ff;
@@ -184,7 +180,6 @@ body{
     font-size: 14px;
 }
 
-/* ===== EDUCATION (HOME) ===== */
 .education-sec{
     background: #141414;
     border: 3px solid #c400ff;
@@ -248,7 +243,6 @@ body{
     height: 100%;
 }
 
-/* ===== FOOTER (shared) ===== */
 .footer{
     background: #0d0d0d;
     color: #666666;
@@ -261,7 +255,6 @@ body{
     margin-top: auto;
 }
 
-/* Space each big section from the one above it */
 .skills-section,
 .contact-page{
     margin-top: 40px;

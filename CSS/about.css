@@ -1,6 +1,3 @@
-/* Styles scoped to #about section only.
-   Header, footer, nav, and body are handled by style.css to avoid conflicts. */
-
 #about .hero {
     display: flex;
     align-items: center;
