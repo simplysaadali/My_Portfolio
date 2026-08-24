@@ -1,10 +1,8 @@
-// Handle recommendation form submission
-document.getElementById('recommendationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('recommendName').value;
+// addRecommendation: builds a new recommendation card and triggers the popup
+function addRecommendation() {
+    const name  = document.getElementById('recommendName').value;
     const title = document.getElementById('recommendTitle').value;
-    const text = document.getElementById('recommendText').value;
+    const text  = document.getElementById('recommendText').value;
 
     // Create new recommendation card
     const newCard = document.createElement('div');
@@ -35,13 +33,21 @@ document.getElementById('recommendationForm').addEventListener('submit', functio
     // Clear form
     document.getElementById('recommendationForm').reset();
 
-    // Show popup
-    showPopup();
+    // Show popup only when a new recommendation is submitted
+    showPopup(true);
+}
+
+// Handle recommendation form submission
+document.getElementById('recommendationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    addRecommendation();
 });
 
-// Show popup
-function showPopup() {
-    document.getElementById('popupModal').style.display = 'flex';
+// Show popup — only displays when isNew is true
+function showPopup(isNew) {
+    if (isNew) {
+        document.getElementById('popupModal').style.display = 'flex';
+    }
 }
 
 // Close popup
