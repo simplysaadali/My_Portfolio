@@ -85,7 +85,21 @@ body{
 .navLink a:hover{
     color: #c400ff;
     text-shadow: 0 0 10px rgba(196, 0, 255, 0.6);
+    font-weight: bold;
+    text-decoration: underline;
 }
+
+/* Profile name styling */
+.hero-right h1 span,
+.Navh2Link {
+    font-weight: 700;
+    color: white;
+}
+
+.hero-right h1 span {
+    color: #c400ff;
+}
+
 
 .main{
     flex: 1;
