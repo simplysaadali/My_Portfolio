@@ -19,7 +19,7 @@
             <img src="images/logo.png" alt="Logo" class="img1">
 
             <h2 class="Navh2">
-                <a href="#about" class="Navh2Link">
+                <a href="#home" class="Navh2Link" id="homeIcon">
                     Saad Ali <br>
                     <span>AI Engineer</span>
                 </a>
@@ -30,6 +30,7 @@
             <a href="#about" class="about">About Me</a>
             <a href="#projects" class="projects">Projects</a>
             <a href="#home" class="home">Skills</a>
+            <a href="#recommendations" class="recommendations">Recommendations</a>
             <a href="#contact" class="contact">Contact Me</a>
         </nav>
 
@@ -252,6 +253,30 @@
                     </div>
                 </div>
 
+                <div class="div1">
+                    <div class="upper1">
+                        <img src="images/earth.png" class="imgLand" alt="AI/ML">
+                    </div>
+                    <div class="lower1">
+                        <h2>AI & Machine Learning</h2>
+                        <p>
+                            Artificial Intelligence and Machine Learning involve building intelligent systems that learn from data and make predictions. I'm exploring neural networks, deep learning, and AI applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="div2">
+                    <div class="upper1">
+                        <img src="images/backend.png" class="imgWater" alt="Database">
+                    </div>
+                    <div class="lower1">
+                        <h2>Database Design</h2>
+                        <p>
+                            Database design involves creating efficient data models and managing complex data structures. I work with MongoDB, SQL, and design scalable database architectures for applications.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -271,6 +296,91 @@
             </p>
             <br>
             <button><a href="#contact" class="linkBTN">Contact Me</a></button>
+        </section>
+
+<!-- recommendations -->
+        <section id="recommendations" class="recommendations-section">
+            <h2 class="recommendationsH2">Recommendations & Testimonials</h2>
+            
+            <div class="add-recommendation-form">
+                <h3>Add Your Recommendation</h3>
+                <form id="recommendationForm">
+                    <input type="text" id="recommendName" placeholder="Your Name" required>
+                    <input type="text" id="recommendTitle" placeholder="Your Title/Position" required>
+                    <textarea id="recommendText" placeholder="Your Recommendation..." required rows="4"></textarea>
+                    <button type="submit" class="submit-btn">Submit Recommendation</button>
+                </form>
+            </div>
+            
+            <div class="recommendations-container" id="recommendationsContainer">
+                
+                <div class="recommendation-card">
+                    <div class="recommendation-header">
+                        <div class="quote-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="recommendation-text">
+                        "Saad is an exceptional developer with a strong grasp of full-stack development. His work on MediTrack 
+                        demonstrated impressive problem-solving skills and attention to detail. He's reliable, enthusiastic, 
+                        and always eager to learn new technologies."
+                    </p>
+                    <div class="recommendation-author">
+                        <div class="author-info">
+                            <h4>Dr. Muhammad Hassan</h4>
+                            <p>Software Engineering Mentor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="recommendation-header">
+                        <div class="quote-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="recommendation-text">
+                        "Working with Saad on a collaborative project was great. He has strong technical skills in JavaScript, 
+                        React, and backend development. His code is clean, well-structured, and he communicates effectively 
+                        with team members."
+                    </p>
+                    <div class="recommendation-author">
+                        <div class="author-info">
+                            <h4>Ahmed Khan</h4>
+                            <p>Project Collaborator & Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="recommendation-header">
+                        <div class="quote-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="recommendation-text">
+                        "Saad demonstrates excellent commitment to continuous learning and self-improvement. His portfolio 
+                        projects show maturity and understanding of modern web development practices. He's a promising talent 
+                        in the AI and software engineering space."
+                    </p>
+                    <div class="recommendation-author">
+                        <div class="author-info">
+                            <h4>Prof. Fatima Malik</h4>
+                            <p>University of Gujrat - Computer Science</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
 <!-- contact -->
@@ -295,6 +405,91 @@
     <footer class="footer">
         Copyright © Saad Ali
     </footer>
+
+    <!-- Popup Modal for Recommendation Submission -->
+    <div id="popupModal" class="popup-modal">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <div class="popup-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h2>Thank You!</h2>
+            <p>Your recommendation has been successfully added to the portfolio.</p>
+            <button class="popup-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Handle recommendation form submission
+        document.getElementById('recommendationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('recommendName').value;
+            const title = document.getElementById('recommendTitle').value;
+            const text = document.getElementById('recommendText').value;
+
+            // Create new recommendation card
+            const newCard = document.createElement('div');
+            newCard.className = 'recommendation-card';
+            newCard.innerHTML = `
+                <div class="recommendation-header">
+                    <div class="quote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <p class="recommendation-text">
+                    "${text}"
+                </p>
+                <div class="recommendation-author">
+                    <div class="author-info">
+                        <h4>${name}</h4>
+                        <p>${title}</p>
+                    </div>
+                </div>
+            `;
+
+            // Add new card to container
+            document.getElementById('recommendationsContainer').appendChild(newCard);
+
+            // Clear form
+            document.getElementById('recommendationForm').reset();
+
+            // Show popup
+            showPopup();
+        });
+
+        // Show popup
+        function showPopup() {
+            document.getElementById('popupModal').style.display = 'flex';
+        }
+
+        // Close popup
+        function closePopup() {
+            document.getElementById('popupModal').style.display = 'none';
+        }
+
+        // Close popup when clicking X
+        document.querySelector('.close-btn').addEventListener('click', closePopup);
+
+        // Close popup when clicking outside
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('popupModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Smooth scroll for home icon
+        document.getElementById('homeIcon').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
 </html>
