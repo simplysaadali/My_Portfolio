@@ -818,3 +818,314 @@ body{
         font-size: 14px;
     }
 }
+
+/* ====== ABOUT SECTION ====== */
+#about .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #151515;
+    border: 3px solid #c400ff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(196,0,255,.4);
+    margin-bottom: 40px;
+}
+
+#about .hero-left {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+#about .hero-left img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #c400ff;
+    transition: .4s;
+}
+
+#about .hero-left img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px white, 0 0 40px #c400ff;
+}
+
+#about .hero-right {
+    width: 60%;
+}
+
+#about .hero-right h1 {
+    color: white;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#about .hero-right span {
+    color: #c400ff;
+}
+
+#about .hero-right h3 {
+    color: #dddddd;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+#about .hero-right p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+#about .hero-btn {
+    padding: 15px 35px;
+    background: #c400ff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .3s;
+    display: inline-block;
+}
+
+#about .hero-btn:hover {
+    transform: translateY(-6px);
+    background: #9f00d4;
+    box-shadow: 0 0 20px white;
+}
+
+#about .about-me {
+    background: #151515;
+    border: 3px solid #c400ff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(196,0,255,.4);
+    margin-bottom: 40px;
+}
+
+#about .about-me h2 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+#about .about-me p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+#about .journey h2 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+#about .journey-container {
+    display: flex;
+    gap: 30px;
+}
+
+#about .journey-card {
+    flex: 1;
+    background: #151515;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #c400ff;
+    transition: .4s;
+}
+
+#about .journey-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 20px white;
+}
+
+#about .journey-card h3 {
+    color: #c400ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#about .journey-card p {
+    color: white;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* ====== CONTACT SECTION ====== */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#contact .contactSection {
+    width: 700px;
+    max-width: 100%;
+    background: #151515;
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid #c400ff;
+    box-shadow: 0 0 20px rgba(196,0,255,.6);
+}
+
+#contact .contactSection h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact button {
+    padding: 15px;
+    font-size: 20px;
+    background: #c400ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#contact button:hover {
+    background: #9f00d4;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px white;
+}
+
+/* ====== RESPONSIVE MEDIA QUERIES ====== */
+@media (max-width: 1024px) {
+    #about .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    #about .hero-left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #about .hero-right {
+        width: 100%;
+    }
+
+    #about .journey-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #about .hero-left img {
+        width: 220px;
+        height: 220px;
+    }
+
+    #about .hero-right h1 {
+        font-size: 38px;
+    }
+
+    #about .hero-right h3 {
+        font-size: 20px;
+    }
+
+    #about .hero-right p,
+    #about .about-me p {
+        font-size: 16px;
+    }
+
+    #about .about-me h2,
+    #about .journey h2 {
+        font-size: 32px;
+    }
+
+    #contact .contactSection {
+        width: 100%;
+    }
+
+    #contact .contactSection h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about .hero {
+        padding: 25px 15px;
+    }
+
+    #about .hero-left img {
+        width: 160px;
+        height: 160px;
+    }
+
+    #about .hero-right h1 {
+        font-size: 28px;
+    }
+
+    #about .hero-right h3 {
+        font-size: 18px;
+    }
+
+    #about .hero-right p,
+    #about .about-me p,
+    #about .journey-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    #about .about-me h2,
+    #about .journey h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #about .about-me,
+    #about .journey-card {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    #contact .contactSection {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    #contact .contactSection h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #contact input,
+    #contact textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #contact button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
