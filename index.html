@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saad Ali | Portfolio</title>
-
     <link rel="stylesheet" href="CSS/style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
 
+    <header class="header">
         <div class="header-logo">
             <img src="images/logo.png" alt="Logo" class="img1">
-
             <h2 class="Navh2">
-                <a href="#home" class="Navh2Link" id="homeIcon">
+                <a href="#about" class="Navh2Link" id="homeIcon">
                     Saad Ali <br>
                     <span>AI Engineer</span>
                 </a>
@@ -25,27 +24,26 @@
         </div>
 
         <nav class="topmenu">
-            <a href="#about" class="about topmenu">About Me</a>
-            <a href="#projects" class="projects topmenu">Project Details</a>
-            <a href="#home" class="home topmenu">Skills</a>
+            <a href="#about"           class="about topmenu">About Me</a>
+            <a href="#projects"        class="projects topmenu">Project Details</a>
+            <a href="#home"            class="home topmenu">Skills</a>
             <a href="#recommendations" class="recommendations topmenu">Recommendations</a>
-            <a href="#contact" class="contact topmenu">Contact Me</a>
+            <a href="#contact"         class="contact topmenu">Contact Me</a>
         </nav>
-
     </header>
 
     <main class="main">
 
-        <!-- about -->
+        <!-- ===== ABOUT ===== -->
         <section id="about" class="about-page">
 
-            <section class="hero">
+            <section class="hero reveal">
                 <div class="hero-left">
                     <img src="images/profile.jpeg" alt="Saad Ali">
                 </div>
 
                 <div class="hero-right">
-                    <h1>Hi, I'm <span>Saad Ali</span></h1>
+                    <h1>Hi, I'm <span id="typed-text"></span></h1>
                     <div class="profile_name">Saad Ali</div>
                     <h3>Computer Science Student | Future AI Engineer</h3>
                     <p>
@@ -54,11 +52,11 @@
                         Artificial Intelligence. Every day I work on improving my skills
                         through real-world projects and continuous learning.
                     </p>
-                    <a href="#contact" class="hero-btn">Contact Me</a>
+                    <a href="#contact" class="hero-btn">Contact Me →</a>
                 </div>
             </section>
 
-            <section class="about-me">
+            <section class="about-me reveal">
                 <h2>About Me</h2>
                 <p>
                     Hello! My name is <strong>Saad Ali</strong>, and I am a 20-year-old Bachelor of Science in
@@ -83,19 +81,19 @@
                 </p>
             </section>
 
-            <section class="journey">
+            <section class="journey reveal">
                 <h2>My Journey</h2>
                 <div class="journey-container">
                     <div class="journey-card">
-                        <h3>Beginning</h3>
+                        <h3>⚡ Beginning</h3>
                         <p>Started with C and C++, learning programming fundamentals, logical thinking, and problem solving.</p>
                     </div>
                     <div class="journey-card">
-                        <h3>Web Development</h3>
+                        <h3>🌐 Web Development</h3>
                         <p>Expanded into HTML, CSS, JavaScript, and WordPress to build modern responsive websites.</p>
                     </div>
                     <div class="journey-card">
-                        <h3>Today</h3>
+                        <h3>🚀 Today</h3>
                         <p>Working on full-stack development, backend technologies, and preparing for Artificial Intelligence.</p>
                     </div>
                 </div>
@@ -103,20 +101,21 @@
 
         </section>
 
-<!-- projects -->
-        <section id="projects" class="projects-section">
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="projects-section reveal">
             <h2 class="projectsH2">Featured Projects</h2>
-            
+            <div class="section-divider"></div>
+
             <div class="projects-container">
-                
+
                 <div class="project-card project">
                     <div class="project-header">
                         <h3>Medi_Track</h3>
                         <span class="project-badge">Full-Stack</span>
                     </div>
                     <p class="project-description">
-                        A comprehensive healthcare appointment management system where patients can register, 
-                        request appointments, and manage their bookings, while staff can view clinic schedules 
+                        A comprehensive healthcare appointment management system where patients can register,
+                        request appointments, and manage their bookings, while staff can view clinic schedules
                         and confirm or cancel appointment requests with secure role-based access control.
                     </p>
                     <div class="project-tech">
@@ -131,14 +130,14 @@
                         <p><strong>Key Features:</strong></p>
                         <ul>
                             <li>Secure JWT authentication with HttpOnly cookies</li>
-                            <li>Role-based access (Patient & Staff)</li>
+                            <li>Role-based access (Patient &amp; Staff)</li>
                             <li>Real-time appointment tracking</li>
                             <li>Password reset functionality</li>
                             <li>MongoDB persistence with Mongoose</li>
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/simplysaadali/Medi_Track" target="_blank" class="project-btn">View Repository</a>
+                        <a href="https://github.com/simplysaadali/Medi_Track" target="_blank" class="project-btn">View Repository →</a>
                     </div>
                 </div>
 
@@ -148,8 +147,8 @@
                         <span class="project-badge">Full-Stack</span>
                     </div>
                     <p class="project-description">
-                        A learning tracker application designed for students to log and manage their practice sessions. 
-                        Users can track study hours by topic, mark sessions as completed, and maintain a comprehensive 
+                        A learning tracker application designed for students to log and manage their practice sessions.
+                        Users can track study hours by topic, mark sessions as completed, and maintain a comprehensive
                         record of their learning journey with an intuitive dashboard.
                     </p>
                     <div class="project-tech">
@@ -170,7 +169,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/simplysaadali/Skill_Track" target="_blank" class="project-btn">View Repository</a>
+                        <a href="https://github.com/simplysaadali/Skill_Track" target="_blank" class="project-btn">View Repository →</a>
                     </div>
                 </div>
 
@@ -180,7 +179,7 @@
                         <span class="project-badge">Full-Stack</span>
                     </div>
                     <p class="project-description">
-                        A modern full-stack blog platform built with React and Node.js that allows users to browse published articles, 
+                        A modern full-stack blog platform built with React and Node.js that allows users to browse published articles,
                         read detailed posts, create new blog entries, and manage content with a clean and responsive user interface.
                     </p>
                     <div class="project-tech">
@@ -202,17 +201,17 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/simplysaadali/Blog_App" target="_blank" class="project-btn">View Repository</a>
+                        <a href="https://github.com/simplysaadali/Blog_App" target="_blank" class="project-btn">View Repository →</a>
                     </div>
                 </div>
 
             </div>
         </section>
 
-<!-- skills -->
-        <section id="home" class="skills-section">
-
-            <h2 class="skillsH2">Skills</h2>
+        <!-- ===== SKILLS ===== -->
+        <section id="home" class="skills-section reveal">
+            <h2 class="skillsH2">Skills &amp; Expertise</h2>
+            <div class="section-divider"></div>
 
             <div class="container">
 
@@ -222,9 +221,7 @@
                     </div>
                     <div class="lower1">
                         <h2>Backend Development</h2>
-                        <p>
-                            Backend development involves building and maintaining the server-side logic and databases that power web applications.
-                        </p>
+                        <p>Building server-side logic and databases powering modern web applications.</p>
                     </div>
                 </div>
 
@@ -234,9 +231,7 @@
                     </div>
                     <div class="lower1">
                         <h2>Frontend Development</h2>
-                        <p>
-                            Frontend development involves creating the user interface and user experience of web applications using HTML, CSS, and JavaScript.
-                        </p>
+                        <p>Creating beautiful, responsive user interfaces with HTML, CSS and JavaScript.</p>
                     </div>
                 </div>
 
@@ -246,9 +241,7 @@
                     </div>
                     <div class="lower1">
                         <h2>WordPress Development</h2>
-                        <p>
-                            WordPress is a popular content management system used for building websites and blogs. WordPress development involves customizing themes, plugins, and functionality to meet specific client needs.
-                        </p>
+                        <p>Customizing themes and plugins to build powerful client-ready websites.</p>
                     </div>
                 </div>
 
@@ -257,10 +250,8 @@
                         <img src="images/earth.png" class="imgLand" alt="AI/ML">
                     </div>
                     <div class="lower1">
-                        <h2>AI & Machine Learning</h2>
-                        <p>
-                            Artificial Intelligence and Machine Learning involve building intelligent systems that learn from data and make predictions. I'm exploring neural networks, deep learning, and AI applications.
-                        </p>
+                        <h2>AI &amp; Machine Learning</h2>
+                        <p>Exploring neural networks, deep learning, and intelligent AI applications.</p>
                     </div>
                 </div>
 
@@ -270,9 +261,7 @@
                     </div>
                     <div class="lower1">
                         <h2>Database Design</h2>
-                        <p>
-                            Database design involves creating efficient data models and managing complex data structures. I work with MongoDB, SQL, and design scalable database architectures for applications.
-                        </p>
+                        <p>Designing scalable data models with MongoDB, SQL, and Mongoose.</p>
                     </div>
                 </div>
 
@@ -282,9 +271,7 @@
                     </div>
                     <div class="lower1">
                         <h2>Cloud Computing</h2>
-                        <p>
-                            Designing and deploying scalable cloud infrastructure using platforms like AWS and Azure, including serverless functions, CI/CD pipelines, and containerized deployments.
-                        </p>
+                        <p>Deploying scalable cloud infrastructure using AWS, Azure, and CI/CD pipelines.</p>
                     </div>
                 </div>
 
@@ -294,9 +281,7 @@
                     </div>
                     <div class="lower1">
                         <h2>Cybersecurity</h2>
-                        <p>
-                            Implementing security best practices including authentication, encryption, input validation, and protecting web applications from common vulnerabilities like XSS and SQL injection.
-                        </p>
+                        <p>Implementing security best practices, encryption, and vulnerability prevention.</p>
                     </div>
                 </div>
 
@@ -306,61 +291,59 @@
                     </div>
                     <div class="lower1">
                         <h2>Version Control (Git)</h2>
-                        <p>
-                            Proficient in Git workflows including branching strategies, pull requests, merge conflict resolution, and collaborating on open-source and team projects via GitHub.
-                        </p>
+                        <p>Proficient in Git workflows, branching strategies, and GitHub collaboration.</p>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section class="education-sec">
+        <section class="education-sec reveal">
             <h2>Education</h2>
             <p>
                 I am <strong><a href="https://www.linkedin.com/in/saad-ali-028574352" target="_blank" class="linksaad">Saad Ali</a></strong>,
                 a 20-year-old <strong>Bachelor of Science in Computer Science (BSCS)</strong> student at the
                 <strong><a href="https://www.uog.edu.pk" target="_blank" class="linkUOG">University of Gujrat (UOG)</a></strong>.
-                I am passionate about technology, programming, and problem-solving,
-                <strong><a href="https://github.com/simplysaadali" target="_blank" class="linksaad">GitHub</a></strong>,
-                and I am continuously expanding my knowledge in software development and modern computing.
-                Throughout my studies, I have gained experience in programming languages such as C, C++, Java, JavaScript, and WordPress,
+                I am passionate about technology, programming, and problem-solving.
+                View my work on <strong><a href="https://github.com/simplysaadali" target="_blank" class="linksaad">GitHub</a></strong>.
+                I am continuously expanding my knowledge in software development and modern computing.
+                Throughout my studies, I have gained experience in C, C++, Java, JavaScript, and WordPress,
                 along with web development using HTML and CSS. My academic journey has strengthened my analytical thinking, teamwork, and
-                communication skills while preparing me for a successful career in the field of computer science. I am eager to keep learning,
-                build innovative projects, and contribute to the ever-evolving world of technology.
+                communication skills while preparing me for a successful career in computer science.
             </p>
             <br>
-            <button><a href="#contact" class="linkBTN">Contact Me</a></button>
+            <button><a href="#contact" class="linkBTN">Get In Touch →</a></button>
         </section>
 
-<!-- recommendations -->
-        <section id="recommendations" class="recommendations-section">
-            <h2 class="recommendationsH2">Recommendations & Testimonials</h2>
-            
+        <!-- ===== RECOMMENDATIONS ===== -->
+        <section id="recommendations" class="recommendations-section reveal">
+            <h2 class="recommendationsH2">Recommendations &amp; Testimonials</h2>
+            <div class="section-divider"></div>
+
             <div class="add-recommendation-form">
-                <h3>Add Your Recommendation</h3>
+                <h3>✍️ Add Your Recommendation</h3>
                 <form id="recommendationForm">
                     <input type="text" id="recommendName" placeholder="Your Name" required>
-                    <input type="text" id="recommendTitle" placeholder="Your Title/Position" required>
-                    <textarea id="recommendText" placeholder="Your Recommendation..." required rows="4"></textarea>
+                    <input type="text" id="recommendTitle" placeholder="Your Title / Position" required>
+                    <textarea id="recommendText" placeholder="Write your recommendation here..." required rows="4"></textarea>
                     <button type="submit" class="submit-btn">Submit Recommendation</button>
                 </form>
             </div>
-            
+
             <div class="recommendations-container" id="recommendationsContainer">
-                
+
                 <div class="recommendation-card recommendation">
                     <div class="recommendation-header">
                         <div class="quote-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
-                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.9996 4.00001C9.2372 4.00001 6.99961 6.23759 6.99961 9.00001C6.99961 11.7624 9.2372 14 11.9996 14V20C8.68594 20 5.52231 18.5358 3.37236 16.0168C1.22241 13.4979 0.295423 10.1896 0.878265 6.96464C1.46111 3.73966 3.50004 0.999986 6.39941 0.999986C9.29879 0.999986 11.9996 3.27329 11.9996 4.00001Z" opacity="0.4"/>
+                                <path d="M23.9996 4.00001C21.2372 4.00001 18.9996 6.23759 18.9996 9.00001C18.9996 11.7624 21.2372 14 23.9996 14V20C20.6859 20 17.5223 18.5358 15.3724 16.0168C13.2224 13.4979 12.2954 10.1896 12.8783 6.96464C13.4611 3.73966 15.5 0.999986 18.3994 0.999986C21.2988 0.999986 23.9996 3.27329 23.9996 4.00001Z" opacity="0.4"/>
                             </svg>
                         </div>
                     </div>
                     <p class="recommendation-text">
-                        "Saad is an exceptional developer with a strong grasp of full-stack development. His work on MediTrack 
-                        demonstrated impressive problem-solving skills and attention to detail. He's reliable, enthusiastic, 
+                        "Saad is an exceptional developer with a strong grasp of full-stack development. His work on MediTrack
+                        demonstrated impressive problem-solving skills and attention to detail. He's reliable, enthusiastic,
                         and always eager to learn new technologies."
                     </p>
                     <div class="recommendation-author">
@@ -374,21 +357,20 @@
                 <div class="recommendation-card recommendation">
                     <div class="recommendation-header">
                         <div class="quote-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
-                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.9996 4.00001C9.2372 4.00001 6.99961 6.23759 6.99961 9.00001C6.99961 11.7624 9.2372 14 11.9996 14V20C8.68594 20 5.52231 18.5358 3.37236 16.0168C1.22241 13.4979 0.295423 10.1896 0.878265 6.96464C1.46111 3.73966 3.50004 0.999986 6.39941 0.999986C9.29879 0.999986 11.9996 3.27329 11.9996 4.00001Z" opacity="0.4"/>
+                                <path d="M23.9996 4.00001C21.2372 4.00001 18.9996 6.23759 18.9996 9.00001C18.9996 11.7624 21.2372 14 23.9996 14V20C20.6859 20 17.5223 18.5358 15.3724 16.0168C13.2224 13.4979 12.2954 10.1896 12.8783 6.96464C13.4611 3.73966 15.5 0.999986 18.3994 0.999986C21.2988 0.999986 23.9996 3.27329 23.9996 4.00001Z" opacity="0.4"/>
                             </svg>
                         </div>
                     </div>
                     <p class="recommendation-text">
-                        "Working with Saad on a collaborative project was great. He has strong technical skills in JavaScript, 
-                        React, and backend development. His code is clean, well-structured, and he communicates effectively 
-                        with team members."
+                        "Working with Saad on a collaborative project was a great experience. He has strong technical skills in JavaScript,
+                        React, and backend development. His code is clean, well-structured, and he communicates effectively with team members."
                     </p>
                     <div class="recommendation-author">
                         <div class="author-info">
                             <h4>Ahmed Khan</h4>
-                            <p>Project Collaborator & Developer</p>
+                            <p>Project Collaborator &amp; Developer</p>
                         </div>
                     </div>
                 </div>
@@ -396,21 +378,21 @@
                 <div class="recommendation-card recommendation">
                     <div class="recommendation-header">
                         <div class="quote-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
-                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5"></path>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.9996 4.00001C9.2372 4.00001 6.99961 6.23759 6.99961 9.00001C6.99961 11.7624 9.2372 14 11.9996 14V20C8.68594 20 5.52231 18.5358 3.37236 16.0168C1.22241 13.4979 0.295423 10.1896 0.878265 6.96464C1.46111 3.73966 3.50004 0.999986 6.39941 0.999986C9.29879 0.999986 11.9996 3.27329 11.9996 4.00001Z" opacity="0.4"/>
+                                <path d="M23.9996 4.00001C21.2372 4.00001 18.9996 6.23759 18.9996 9.00001C18.9996 11.7624 21.2372 14 23.9996 14V20C20.6859 20 17.5223 18.5358 15.3724 16.0168C13.2224 13.4979 12.2954 10.1896 12.8783 6.96464C13.4611 3.73966 15.5 0.999986 18.3994 0.999986C21.2988 0.999986 23.9996 3.27329 23.9996 4.00001Z" opacity="0.4"/>
                             </svg>
                         </div>
                     </div>
                     <p class="recommendation-text">
-                        "Saad demonstrates excellent commitment to continuous learning and self-improvement. His portfolio 
-                        projects show maturity and understanding of modern web development practices. He's a promising talent 
+                        "Saad demonstrates excellent commitment to continuous learning and self-improvement. His portfolio
+                        projects show maturity and understanding of modern web development practices. He's a promising talent
                         in the AI and software engineering space."
                     </p>
                     <div class="recommendation-author">
                         <div class="author-info">
                             <h4>Prof. Fatima Malik</h4>
-                            <p>University of Gujrat - Computer Science</p>
+                            <p>University of Gujrat — Computer Science Dept.</p>
                         </div>
                     </div>
                 </div>
@@ -418,45 +400,42 @@
             </div>
         </section>
 
-<!-- contact -->
-        <section id="contact" class="contact-page">
-
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="contact-page reveal">
             <section class="contactSection">
                 <h1>Contact Me</h1>
-
                 <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <textarea rows="7" placeholder="Description..." required></textarea>
-                    <button type="submit">Send Message</button>
+                    <input type="text"  placeholder="Your Name"     required>
+                    <input type="email" placeholder="Your Email"    required>
+                    <input type="tel"   placeholder="Phone Number"  required>
+                    <textarea rows="7"  placeholder="Your Message..." required></textarea>
+                    <button type="submit">Send Message →</button>
                 </form>
             </section>
-
         </section>
 
     </main>
 
     <footer class="footer">
-        Copyright © Saad Ali
+        &copy; 2025 Saad Ali — All Rights Reserved
     </footer>
 
-    <!-- Popup Modal for Recommendation Submission -->
+    <!-- Popup Modal -->
     <div id="popupModal" class="popup-modal">
         <div class="popup-content">
             <span class="close-btn">&times;</span>
             <div class="popup-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
             </div>
-            <h2>Thank You!</h2>
+            <h2>Thank You! 🎉</h2>
             <p>Your recommendation has been successfully added to the portfolio.</p>
             <button class="popup-btn" onclick="closePopup()">Close</button>
         </div>
     </div>
 
     <script src="JS/script.js"></script>
-
 </body>
 </html>
