@@ -95,7 +95,7 @@ body{
     padding: 40px 20px;
 }
 
-#home, #about, #contact{
+#home, #about, #contact, #projects{
     scroll-margin-top: 30px;
 }
 
@@ -105,6 +105,144 @@ body{
     border-radius: 20px;
     padding: 40px 30px;
     box-shadow: 0 0 25px rgba(196, 0, 255, 0.4);
+}
+
+.projects-section{
+    background: #141414;
+    border: 3px solid #c400ff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 0 25px rgba(196, 0, 255, 0.4);
+    margin-top: 40px;
+}
+
+.projectsH2{
+    color: white;
+    font-size: 38px;
+    margin-bottom: 35px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.project-card{
+    background: #0a0a0a;
+    border: 2px solid #252525;
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover{
+    transform: translateY(-8px);
+    border-color: #c400ff;
+    box-shadow: 0 15px 35px rgba(196, 0, 255, 0.25);
+}
+
+.project-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.project-header h3{
+    color: #c400ff;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.project-badge{
+    background: #c400ff;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.project-description{
+    color: #d0d0d0;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-tag{
+    background: rgba(196, 0, 255, 0.15);
+    color: #c400ff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(196, 0, 255, 0.3);
+}
+
+.project-features{
+    background: rgba(196, 0, 255, 0.05);
+    border-left: 3px solid #c400ff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-features p{
+    color: #c400ff;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.project-features ul{
+    color: #b8b8b8;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.project-features li{
+    margin-bottom: 5px;
+}
+
+.project-links{
+    display: flex;
+    gap: 12px;
+}
+
+.project-btn{
+    display: inline-block;
+    background: #c400ff;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 2px solid #c400ff;
+}
+
+.project-btn:hover{
+    background: transparent;
+    color: #c400ff;
+    box-shadow: 0 0 15px rgba(196, 0, 255, 0.5);
 }
 
 .skillsH2{
@@ -276,8 +414,16 @@ body{
         width: 60%;
     }
 
-    .skillsH2, .education-sec h2 {
+    .skillsH2, .education-sec h2, .projectsH2 {
         font-size: 32px;
+    }
+
+    .project-card{
+        padding: 25px;
+    }
+
+    .project-header h3{
+        font-size: 22px;
     }
 }
 
@@ -298,11 +444,11 @@ body{
         max-width: 400px;
     }
 
-    .skills-section, .education-sec {
+    .skills-section, .education-sec, .projects-section {
         padding: 30px 20px;
     }
 
-    .skillsH2, .education-sec h2 {
+    .skillsH2, .education-sec h2, .projectsH2 {
         font-size: 26px;
         text-align: center;
     }
@@ -311,5 +457,31 @@ body{
         font-size: 15px;
         line-height: 1.7;
         text-align: center;
+    }
+
+    .project-card{
+        padding: 20px;
+    }
+
+    .project-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .project-description{
+        font-size: 14px;
+    }
+
+    .tech-tag{
+        font-size: 11px;
+    }
+
+    .project-features p{
+        font-size: 13px;
+    }
+
+    .project-features ul{
+        font-size: 12px;
     }
 }
