@@ -6,7 +6,7 @@ function addRecommendation() {
 
     // Create new recommendation card
     const newCard = document.createElement('div');
-    newCard.className = 'recommendation-card';
+    newCard.className = 'recommendation-card recommendation';
     newCard.innerHTML = `
         <div class="recommendation-header">
             <div class="quote-icon">

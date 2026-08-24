@@ -66,14 +66,14 @@ body{
     text-shadow: 0 0 10px #c400ff;
 }
 
-.navLink{
+.topmenu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: clamp(15px, 3vw, 40px);
 }
 
-.navLink a{
+.topmenu a {
     color: white;
     text-decoration: none;
     font-size: clamp(13px, 3vw, 18px);
@@ -82,10 +82,15 @@ body{
     transition: all 0.3s ease;
 }
 
-.navLink a:hover,
-.topmenu:hover {
+.topmenu a:hover {
     color: #c400ff;
     text-shadow: 0 0 10px rgba(196, 0, 255, 0.6);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.topmenu:hover {
+    color: #c400ff;
     font-weight: bold;
     text-decoration: underline;
 }
