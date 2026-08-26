@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="images/logo.png" alt="Saad Ali logo" width="96" />
-
 # Saad Ali | Portfolio
 
 ### Computer Science student building thoughtful digital experiences
