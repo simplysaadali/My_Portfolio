@@ -5,7 +5,7 @@
 ### Computer Science student building thoughtful digital experiences
 
 <p>
-  <a href="https://simplysaadali.github.io/My_Portfolio/"><strong>View Live Portfolio</strong></a>
+  <a href="https://my-portfolio-alpha-lemon-96.vercel.app/"><strong>View Live Portfolio</strong></a>
   ·
   <a href="https://github.com/simplysaadali">GitHub</a>
   ·
@@ -80,7 +80,7 @@ Then visit `http://localhost:8000`.
 
 ## Connect
 
-Interested in collaborating, sharing feedback, or discussing AI and software engineering? Visit the [live portfolio](https://simplysaadali.github.io/My_Portfolio/) or connect on [LinkedIn](https://www.linkedin.com/in/saad-ali-028574352).
+Interested in collaborating, sharing feedback, or discussing AI and software engineering? Visit the [live portfolio](https://my-portfolio-alpha-lemon-96.vercel.app/) or connect on [LinkedIn](https://www.linkedin.com/in/saad-ali-028574352).
 
 <div align="center">
 
