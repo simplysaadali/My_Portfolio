@@ -88,6 +88,27 @@ body {
     gap: 14px;
 }
 
+.iconbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: var(--primary);
+    border: 1px solid var(--border);
+    background: rgba(0, 212, 255, 0.06);
+    text-decoration: none;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.iconbutton:hover {
+    background: rgba(0, 212, 255, 0.15);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px);
+}
+
 .img1 {
     width: clamp(42px, 7vw, 58px);
     height: clamp(42px, 7vw, 58px);
@@ -457,7 +478,7 @@ body {
     margin-top: 40px;
 }
 
-.div1, .div2, .div3 {
+.div1, .div2, .div3, .skill {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -637,7 +658,7 @@ body {
     margin-top: 40px;
 }
 
-.project-card, .project {
+.project-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -647,7 +668,7 @@ body {
     overflow: hidden;
 }
 
-.project-card::before, .project::before {
+.project-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
@@ -658,11 +679,11 @@ body {
     transition: transform 0.4s ease;
 }
 
-.project-card:hover::before, .project:hover::before {
+.project-card:hover::before {
     transform: scaleX(1);
 }
 
-.project-card:hover, .project:hover {
+.project-card:hover {
     transform: translateY(-8px);
     border-color: rgba(0, 212, 255, 0.3);
     box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1), var(--glow-purple);
