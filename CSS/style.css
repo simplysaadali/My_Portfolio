@@ -112,7 +112,7 @@ body {
 .img1 {
     width: clamp(42px, 7vw, 58px);
     height: clamp(42px, 7vw, 58px);
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--primary);
     box-shadow: var(--glow-cyan);
